@@ -1,3 +1,4 @@
 #!/bin/bash
-sudo yum install -y nmap &> /var/log/configure.log
-wget -O - https://raw.githubusercontent.com/MicrosoftDocs/mslearn-ansible-control-machine/master/configure-ansible-centos.sh | sudo bash
+curl -o /var/tmp/localscript.sh https://raw.githubusercontent.com/MikaJokinen/2021Public/master/configure-vm01-local.sh
+chmod 777 /var/tmp/localscript.sh
+/var/tmp/localscript.sh &> /var/log/localscript.log
